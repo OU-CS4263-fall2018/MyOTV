@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import {
     BrowserRouter as Router,
     Route,
@@ -9,9 +9,9 @@ import {
   } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as userActions from './redux/actions/userActions';
+import * as userActions from '../redux/actions/userActions';
 
-class SurvivorshipPlan extends Component {
+class Settings extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,4 +67,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(SurvivorshipPlan); 
+)(Settings); 

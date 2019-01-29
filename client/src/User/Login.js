@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import {
     BrowserRouter as Router,
     Route,
@@ -9,7 +9,7 @@ import {
   } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as userActions from './redux/actions/userActions';
+import * as userActions from '../redux/actions/userActions';
 
 class Login extends Component {
   constructor(props) {

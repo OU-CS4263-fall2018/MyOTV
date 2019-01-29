@@ -12,14 +12,14 @@ import {
   Redirect
 } from 'react-router-dom'
 
-import Login from './Login.js';
-import NewAccount from './NewAccount.js';
-import Account from './Account.js';
-import Dashboard from './Dashboard.js';
-import Logs from './Logs.js';
+import Login from './User/Login.js';
+import NewAccount from './User/NewAccount.js';
+import Account from './User/Account.js';
+import Dashboard from './Pages/Dashboard.js';
+import Logs from './Pages/Logs.js';
 import Photos from './Pages/Photos.js';
-import Settings from './Settings.js';
-import SurvivorshipPlan from './SurvivorshipPlan.js';
+import Settings from './User/Settings.js';
+import SurvivorshipPlan from './Pages/SurvivorshipPlan.js';
 import './assets/stylesheets/style.css'
 
 class App extends React.Component {
