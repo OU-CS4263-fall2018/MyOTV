@@ -17,7 +17,7 @@ import NewAccount from './NewAccount.js';
 import Account from './Account.js';
 import Dashboard from './Dashboard.js';
 import Logs from './Logs.js';
-import Photos from './Photos.js';
+import Photos from './Pages/Photos.js';
 import Settings from './Settings.js';
 import SurvivorshipPlan from './SurvivorshipPlan.js';
 import './assets/stylesheets/style.css'
