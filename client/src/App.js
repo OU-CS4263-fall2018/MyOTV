@@ -16,10 +16,18 @@ import Login from './User/Login.js';
 import NewAccount from './User/NewAccount.js';
 import Account from './User/Account.js';
 import Dashboard from './Pages/Dashboard.js';
-import Logs from './Pages/Logs.js';
 import Photos from './Pages/Photos.js';
 import Settings from './User/Settings.js';
 import SurvivorshipPlan from './Pages/SurvivorshipPlan.js';
+
+import ExerciseLog from './Logs/Exercise.js';
+import FoodLog from './Logs/Food.js';
+import MedicationLog from './Logs/Medication.js';
+import MoodLog from './Logs/Mood.js';
+import PainLog from './Logs/Pain.js';
+import VitalsLog from './Logs/Vitals.js';
+import WeightLog from './Logs/Weight.js';
+
 import './assets/stylesheets/style.css'
 
 class App extends React.Component {
@@ -48,7 +56,7 @@ class App extends React.Component {
                 </li>
               </ul>
             </nav>
-
+            
             <div class="container-fluid">
               <div class="row">
                 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
@@ -57,9 +65,29 @@ class App extends React.Component {
                       <li className="nav-item">
                         <Link className="nav-link" to="/dashboard">Dashboard</Link>
                       </li>
+                      
                       <li className="nav-item">
-                        <Link className="nav-link" to="/logs">Logs</Link>
-                      </li>
+                          <Link className="nav-link" to="/logs/exercise">Exercise</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/logs/food">Food</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/logs/medication">Medication</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/logs/mood">Mood</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/logs/pain">Pain</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/logs/vitals">Vitals</Link>
+                        </li>
+                        <li className="nav-item">
+                          <Link className="nav-link" to="/logs/weight">Weight</Link>
+                        </li>
+                     
                       <li className="nav-item">
                         <Link className="nav-link" to="/survivorshipplan">Survivorship Plan</Link>
                       </li>
@@ -74,10 +102,17 @@ class App extends React.Component {
                   <Switch>  
                     <Route path="/account" component={Account} />
                     <Route path="/dashboard" component={Dashboard} />
-                    <Route path="/logs" component={Logs} />
+                    <Route path="/logs/exercise" component={ExerciseLog} />
+                    <Route path="/logs/food" component={FoodLog} />
+                    <Route path="/logs/medication" component={MedicationLog} />
+                    <Route path="/logs/mood" component={MoodLog} />
+                    <Route path="/logs/pain" component={PainLog} />
+                    <Route path="/logs/vitals" component={VitalsLog} />
+                    <Route path="/logs/weight" component={WeightLog} />
                     <Route path="/photos" component={Photos} />
                     <Route path="/settings" component={Settings} />
                     <Route path="/survivorshipplan" component={SurvivorshipPlan} />
+
                     <Redirect from="*" to="/dashboard"/>
                   </Switch>
                 </main>
