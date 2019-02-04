@@ -44,8 +44,64 @@ class MedicationLog extends Component {
 
   render() {
     return ( 
-        <div className="d-flex justify-content-center">
-            
+        <div className="d-flex p-2">
+        <div className="Checkbox Group">
+            <p>2/4/19</p>
+            <form>
+            <input onChange={this.handleChange} type="checkbox" name="Meds" id="Meds1" />
+            <label for="Meds"> Meds 1 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds2" id="Meds2" />
+            <label for="Meds2"> Meds 2 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds3" id="Meds3" />
+            <label for="Meds3">Meds 3 </label>
+            </form>
+            <p>2/5/19</p>
+            <form>
+            <input onChange={this.handleChange} type="checkbox" name="Meds" id="Meds1" />
+            <label for="Meds"> Meds 1 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds2" id="Meds2" />
+            <label for="Meds2"> Meds 2 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds3" id="Meds3" />
+            <label for="Meds3">Meds 3 </label>
+            </form>
+            <p>2/6/19</p>
+            <form>
+            <input onChange={this.handleChange} type="checkbox" name="Meds" id="Meds1" />
+            <label for="Meds"> Meds 1 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds2" id="Meds2" />
+            <label for="Meds2"> Meds 2 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds3" id="Meds3" />
+            <label for="Meds3">Meds 3 </label>
+            </form>
+            <p>2/7/19</p>
+            <form>
+            <input onChange={this.handleChange} type="checkbox" name="Meds" id="Meds1" />
+            <label for="Meds"> Meds 1 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds2" id="Meds2" />
+            <label for="Meds2"> Meds 2 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds3" id="Meds3" />
+            <label for="Meds3">Meds 3 </label>
+            </form>
+            <p>2/8/19</p>
+            <form>
+            <input onChange={this.handleChange} type="checkbox" name="Meds" id="Meds1" />
+            <label for="Meds"> Meds 1 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds2" id="Meds2" />
+            <label for="Meds2"> Meds 2 </label>
+            <br />
+            <input onChange={this.handleChange} type="checkbox" name="Meds3" id="Meds3" />
+            <label for="Meds3">Meds 3 </label>
+            </form>
+        </ div>
         </div>
     );
   }
