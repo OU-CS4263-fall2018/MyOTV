@@ -64,6 +64,9 @@ body {
  * Navbar
  */
 
+.navbar {
+  padding-right: 0px;
+}
 .navbar-brand {
   padding-top: .75rem;
   padding-bottom: .75rem;

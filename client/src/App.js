@@ -30,6 +30,14 @@ import WeightLog from './Logs/Weight.js';
 
 import './assets/stylesheets/style.css'
 
+const submenu = {
+  rightMargin:'40px'
+};
+
+const toggle = {
+  color:'#333'
+};
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -66,31 +74,37 @@ class App extends React.Component {
                         <Link className="nav-link" to="/dashboard">Dashboard</Link>
                       </li>
                       
-                      <li className="nav-item">
-                          <Link className="nav-link" to="/logs/exercise">Exercise</Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logs/food">Food</Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logs/medication">Medication</Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logs/mood">Mood</Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logs/pain">Pain</Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logs/vitals">Vitals</Link>
-                        </li>
-                        <li className="nav-item">
-                          <Link className="nav-link" to="/logs/weight">Weight</Link>
-                        </li>
-                     
+                      <li className="active nav-item nav-link">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" style={toggle} class="dropdown-toggle">Logs</a>
+                        <ul className="collapse list-unstyled" style={submenu} id="homeSubmenu">
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/exercise">Exercise</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/food">Food</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/medication">Medication</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/mood">Mood</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/pain">Pain</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/vitals">Vitals</Link>
+                            </li>
+                            <li className="nav-item">
+                              <Link className="nav-link" to="/logs/weight">Weight</Link>
+                            </li>                
+                        </ul>
+                      </li>
+
                       <li className="nav-item">
                         <Link className="nav-link" to="/survivorshipplan">Survivorship Plan</Link>
                       </li>
+
                       <li className="nav-item">
                         <Link className="nav-link" to="/photos">Photos</Link>
                       </li>
