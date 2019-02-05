@@ -44,8 +44,32 @@ class ExerciseLog extends Component {
 
   render() {
     return ( 
-        <div className="d-flex justify-content-center">
-            
+        <div class="home">
+        <div className="d-flex p-2">
+            <p>2/4/19</p>
+        </div>
+        <textarea value={"5 Push-Ups\n10 Crunches\n1 Mile Run"} 
+        editable={false} style={{width:"800px", height:"100px"}}/>
+        <div className="d-flex p-2">
+            <p>2/5/19</p>
+        </div>
+        <textarea value={"5 Push-Ups\n10 Crunches\n1 Mile Run"} 
+        editable={false} style={{width:"800px", height:"100px"}}/>
+        <div className="d-flex p-2">
+            <p>2/6/19</p>
+        </div>
+        <textarea value={"5 Push-Ups\n10 Crunches\n1 Mile Run"} 
+        editable={false} style={{width:"800px", height:"100px"}}/>
+        <div className="d-flex p-2">
+            <p>2/7/19</p>
+        </div>
+        <textarea value={"5 Push-Ups\n10 Crunches\n1 Mile Run"} 
+        editable={false} style={{width:"800px", height:"100px"}}/>
+        <div className="d-flex p-2">
+            <p>2/8/19</p>
+        </div>
+        <textarea value={"5 Push-Ups\n10 Crunches\n1 Mile Run"} 
+        editable={false} style={{width:"800px", height:"100px"}}/>
         </div>
     );
   }
