@@ -9,7 +9,8 @@ export function saveToken(token) {
 
 export function purgeToken() {
     return {
-        type: types.PURGE_TOKEN
+        type: types.PURGE_TOKEN,
+        token: ""
     }
 }
 
@@ -22,6 +23,7 @@ export function saveUser(user) {
 
 export function purgeUser() {
     return {
-        type: types.PURGE_USER
+        type: types.PURGE_USER,
+        user: ""
     }
 }

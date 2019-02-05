@@ -45,11 +45,19 @@ class App extends React.Component {
       user: "",
       token: ""
     };
+    this.handleLogout = this.handleLogout.bind(this);
   }
   
+  handleLogout(event) {
+    this.props.userActions.purgeUser();
+    this.props.userActions.purgeToken();
+    this.setState({user: "", token: ""});
+    event.preventDefault();
+  }
+
   render() {
     const user = this.state.user;
-
+    console.log(user);
     // change back to "!=="
     if (this.props.user !== ""){
       return (
@@ -60,7 +68,17 @@ class App extends React.Component {
               <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"/>
               <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                  <a class="nav-link" href="#">Sign out</a>
+                  <Link className="nav-link" to="/account">Account</Link>
+                </li>
+              </ul>
+              <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                  <Link className="nav-link" to="/settings">Settings</Link>
+                </li>
+              </ul>
+              <ul class="navbar-nav px-3">
+                <li class="nav-item text-nowrap">
+                  <a class="nav-link" href="#" onClick={this.handleLogout}>Sign out</a>
                 </li>
               </ul>
             </nav>
