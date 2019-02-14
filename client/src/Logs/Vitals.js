@@ -44,8 +44,26 @@ class VitalsLog extends Component {
 
   render() {
     return ( 
-        <div className="d-flex justify-content-center">
-            
+        <div className="">
+            <p>11/16/16</p>
+            <p>Body Temperature: </p>
+            <p>Pulse: </p>
+            <p>Blood Pressure: </p>
+            <br/>
+            <p>11/16/16</p>
+            <p>Body Temperature: </p>
+            <p>Pulse: </p>
+            <p>Blood Pressure: </p>
+            <br/>
+            <p>11/16/16</p>
+            <p>Body Temperature: </p>
+            <p>Pulse: </p>
+            <p>Blood Pressure: </p>
+            <br/>
+            <p>11/16/16</p>
+            <p>Body Temperature: </p>
+            <p>Pulse: </p>
+            <p>Blood Pressure: </p>
         </div>
     );
   }
