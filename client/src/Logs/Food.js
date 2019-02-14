@@ -44,8 +44,18 @@ class FoodLog extends Component {
 
   render() {
     return ( 
-        <div className="d-flex justify-content-center">
-            
+        <div className="">
+            <h3>Breakfast</h3>
+            <p>Oatmeal and berries</p>
+            <p>Granola</p>
+            <br/>
+            <h3>Lunch</h3>
+            <p>Oatmeal and berries</p>
+            <p>Granola</p>
+            <br/>
+            <h3>Snacks</h3>
+            <p>Oatmeal and berries</p>
+            <p>Granola</p>
         </div>
     );
   }

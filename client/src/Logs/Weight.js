@@ -10,6 +10,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/userActions';
+import LineGraph from './LineGraph';
 
 class WeightLog extends Component {
   constructor(props) {
@@ -45,7 +46,7 @@ class WeightLog extends Component {
   render() {
     return ( 
         <div className="d-flex justify-content-center">
-            
+            <LineGraph />
         </div>
     );
   }
