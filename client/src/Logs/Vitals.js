@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import '../assets/stylesheets/Vitals.css'
 import {
     BrowserRouter as Router,
     Route,
@@ -10,6 +11,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/userActions';
+import Card from './Card';
 
 class VitalsLog extends Component {
   constructor(props) {
@@ -44,27 +46,27 @@ class VitalsLog extends Component {
 
   render() {
     return ( 
-        <div className="">
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-            <br/>
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-            <br/>
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-            <br/>
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
+      <div className='vitals'>
+        <p>+ Add Log</p>
+        <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
+        <Card />
+        <div className='vitals'>
+          <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
+          <Card />
         </div>
+        <div className='vitals'>
+          <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
+          <Card />
+        </div>
+        <div className='vitals'>
+          <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
+          <Card />
+        </div>
+        <div className='vitals'>
+          <h5 style={{paddingTop: '30px'}}>##/##/####</h5>
+          <Card />
+        </div>
+      </div>
     );
   }
 }

@@ -1,0 +1,29 @@
+.vitals {
+    
+}
+
+.buttons {
+    position: absolute; 
+    right: 30px;
+}
+
+.statNames {
+    width: 50%;
+    color: #2699FB;
+}
+
+.stats {
+    display: flex;
+}
+
+.statNumbers {
+    flex-direction: column;
+    padding-left: 16px;
+    color: #2699FB;
+}
+
+p {
+    padding-top: 10px;
+    margin-bottom: 0px;
+    color: #4BA9FA;
+}
