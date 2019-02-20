@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/userActions';
 import Card from './Card';
+import Button from '@material-ui/core/Button';
 
 class VitalsLog extends Component {
   constructor(props) {
@@ -20,7 +21,8 @@ class VitalsLog extends Component {
         user: "",
         token: "",
         email: "",
-        pw: ""
+        pw: "",
+        logs: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -44,28 +46,22 @@ class VitalsLog extends Component {
     event.preventDefault();
   }
 
+  addLog() {
+    let nextId = this.state.logs.length + 1;
+    this.setState({logs: this.state.logs.concat([nextId])});
+  }
+
+  renderLogs() {
+    return this.state.logs.map((logID) => {
+       return <Card key={logID}/>;
+    });
+  }
+
   render() {
     return ( 
-      <div className='vitals'>
-        <p>+ Add Log</p>
-        <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
-        <Card />
-        <div className='vitals'>
-          <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
-          <Card />
-        </div>
-        <div className='vitals'>
-          <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
-          <Card />
-        </div>
-        <div className='vitals'>
-          <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
-          <Card />
-        </div>
-        <div className='vitals'>
-          <h5 style={{paddingTop: '30px'}}>##/##/####</h5>
-          <Card />
-        </div>
+      <div>
+        <Button style={{color:'#4BA9FA', marginTop: '10px'}} size="small" onClick={this.addLog.bind(this)}>+ Add Log</Button>
+        {this.renderLogs()}
       </div>
     );
   }
