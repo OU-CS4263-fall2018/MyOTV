@@ -51,6 +51,7 @@ class VitalsLog extends Component {
     this.setState({logs: this.state.logs.concat([nextId])});
   }
 
+  // Gets called everytime setState is called
   renderLogs() {
     return this.state.logs.map((logID) => {
        return <Card key={logID}/>;
@@ -60,7 +61,10 @@ class VitalsLog extends Component {
   render() {
     return ( 
       <div>
-        <Button style={{color:'#4BA9FA', marginTop: '10px'}} size="small" onClick={this.addLog.bind(this)}>+ Add Log</Button>
+        <Button style={{color:'#4BA9FA', marginTop: '10px'}} size="small" 
+          onClick={this.addLog.bind(this)}>
+            + Add Log
+        </Button>
         {this.renderLogs()}
       </div>
     );
