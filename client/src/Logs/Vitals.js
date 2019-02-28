@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import '../assets/stylesheets/Vitals.css'
 import {
     BrowserRouter as Router,
     Route,
@@ -10,6 +11,8 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/userActions';
+import Card from './Card';
+import Button from '@material-ui/core/Button';
 
 class VitalsLog extends Component {
   constructor(props) {
@@ -18,7 +21,8 @@ class VitalsLog extends Component {
         user: "",
         token: "",
         email: "",
-        pw: ""
+        pw: "",
+        logs: []
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,29 +46,27 @@ class VitalsLog extends Component {
     event.preventDefault();
   }
 
+  addLog() {
+    let nextId = this.state.logs.length + 1;
+    this.setState({logs: this.state.logs.concat([nextId])});
+  }
+
+  // Gets called everytime setState is called
+  renderLogs() {
+    return this.state.logs.map((logID) => {
+       return <Card key={logID}/>;
+    });
+  }
+
   render() {
     return ( 
-        <div className="">
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-            <br/>
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-            <br/>
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-            <br/>
-            <p>11/16/16</p>
-            <p>Body Temperature: </p>
-            <p>Pulse: </p>
-            <p>Blood Pressure: </p>
-        </div>
+      <div>
+        <Button style={{color:'#4BA9FA', marginTop: '10px'}} size="small" 
+          onClick={this.addLog.bind(this)}>
+            + Add Log
+        </Button>
+        {this.renderLogs()}
+      </div>
     );
   }
 }
