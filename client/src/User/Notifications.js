@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/userActions';
 
-class Settings extends Component {
+class Notifications extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -67,4 +67,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(Settings); 
+)(Notifications); 
