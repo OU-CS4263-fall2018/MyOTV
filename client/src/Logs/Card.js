@@ -28,30 +28,30 @@ function SimpleCard(props) {
 
   return (
     <div>
-        <h5 style={{color: '#4BA9FA', paddingTop: '30px'}}>##/##/####</h5>
-        <Card className={classes.card}>
+      <h5 style={{ color: '#4BA9FA', paddingTop: '30px' }}>{props.date}</h5>
+      <Card className={classes.card}>
         <CardContent>
-        <CardActions>
+          <CardActions>
             <div className="buttons">
-                <Button style={{color:'#4BA9FA'}} size="small">Edit</Button>
-                <Button style={{color:'#4BA9FA'}} size="small">Delete</Button>
+              <Button style={{ color: '#4BA9FA' }} size="small">Edit</Button>
+              <Button style={{ color: '#4BA9FA' }} size="small">Delete</Button>
             </div>
-        </CardActions>
-        <div className="stats">
-                <div className="statNames" 
-                    style={{borderRight: '0.1em solid black', padding: '0.5em', borderColor: '#C0C0C0'}}>
-                    <h5>Body Temperature: </h5>
-                    <h5>Pulse Rate: </h5>
-                    <h5>Blood Pressure: </h5>
-                </div>
-                <div className="statNumbers">
-                    <h5>## F</h5>
-                    <h5>## beats/min</h5>
-                    <h5>###/## mm Hg</h5>
-                </div>
+          </CardActions>
+          <div className="stats">
+            <div className="statNames"
+              style={{ borderRight: '0.1em solid black', padding: '0.5em', borderColor: '#C0C0C0' }}>
+              <h5>Body Temperature: </h5>
+              <h5>Pulse Rate: </h5>
+              <h5>Blood Pressure: </h5>
             </div>
+            <div className="statNumbers">
+              <h5>{props.bodyTemp} F</h5>
+              <h5>{props.pulseRate} beats/min</h5>
+              <h5>{props.bloodPressure} mmHg</h5> 
+            </div>
+          </div>
         </CardContent>
-        </Card>
+      </Card>
     </div>
   );
 }
