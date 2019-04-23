@@ -92,9 +92,22 @@ body {
   box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
 }
 
+.bullet {
+  display: 'inline-block',
+}
+.title {
+  font-size: 14,
+}
+.pos {
+  margin-Bottom: 12,
+}
 /*
  * Utilities
  */
 
 .border-top { border-top: 1px solid #e5e5e5; }
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.card {
+  height: 145vw
+}

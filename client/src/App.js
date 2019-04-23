@@ -16,8 +16,8 @@ import Login from './User/Login.js';
 import NewAccount from './User/NewAccount.js';
 import Account from './User/Account.js';
 import Dashboard from './Pages/Dashboard.js';
+import Notifications from './User/Notifications.js';
 import Photos from './Pages/Photos.js';
-import Settings from './User/Settings.js';
 import SurvivorshipPlan from './Pages/SurvivorshipPlan.js';
 
 import ExerciseLog from './Logs/Exercise.js';
@@ -68,12 +68,12 @@ class App extends React.Component {
               <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search"/>
               <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                  <Link className="nav-link" to="/account">Account</Link>
+                  <Link className="nav-link" to="/notifications">Notifications</Link>
                 </li>
               </ul>
               <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
-                  <Link className="nav-link" to="/settings">Settings</Link>
+                  <Link className="nav-link" to="/account">Account</Link>
                 </li>
               </ul>
               <ul class="navbar-nav px-3">
@@ -138,11 +138,11 @@ class App extends React.Component {
                     <Route path="/logs/food" component={FoodLog} />
                     <Route path="/logs/medication" component={MedicationLog} />
                     <Route path="/logs/mood" component={MoodLog} />
+                    <Route path="/notifications" component={Notifications} />
                     <Route path="/logs/pain" component={PainLog} />
                     <Route path="/logs/vitals" component={VitalsLog} />
                     <Route path="/logs/weight" component={WeightLog} />
-                    <Route path="/photos" component={Photos} />
-                    <Route path="/settings" component={Settings} />
+                    <Route path="/photos" component={Photos} />  
                     <Route path="/survivorshipplan" component={SurvivorshipPlan} />
 
                     <Redirect from="*" to="/dashboard"/>
