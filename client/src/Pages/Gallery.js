@@ -8,7 +8,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import tileData from './tileData';
-import image from './images/breakfast.jpg'
+import image from './images/placeholder.png'
 
 const styles = theme => ({
   root: {
@@ -19,46 +19,29 @@ const styles = theme => ({
     backgroundColor: theme.palette.background.paper,
   },
   gridList: {
-    width: 500,
-    height: 450,
+    width: 900,
+    height: 850,
   },
   icon: {
     color: 'rgba(255, 255, 255, 0.54)',
   },
 });
 
-/**
- * The example data is tructured as follows:
- *
- * import image from 'path/to/image.jpg';
- * [etc...]
- *
- * const tileData = [
- *   {
- *     img: image,
- *     title: 'Image',
- *     author: 'author',
- *   },
- *   {
- *     [etc...]
- *   },
- * ];
- */
 function TitlebarGridList(props) {
   const { classes } = props;
 
   return (
     <div className={classes.root}>
-      <GridList cellHeight={180} className={classes.gridList}>
+      <GridList cellHeight={250} className={classes.gridList}>
         <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div">December</ListSubheader>
+          <ListSubheader component="div">Photo Gallery</ListSubheader>
         </GridListTile>
         {tileData.map(tile => (
           <GridListTile key={image}>
             <img src={image} alt={tile.title} />
             <GridListTileBar
               title={tile.title}
-              subtitle={<span>by: {tile.author}</span>}
+              // subtitle={<span>by: {tile.author}</span>}
               actionIcon={
                 <IconButton className={classes.icon}>
                   <InfoIcon />
