@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import Gallery from './Gallery'
 import {
     BrowserRouter as Router,
     Route,
@@ -45,7 +46,7 @@ class Photos extends Component {
   render() {
     return ( 
         <div className="d-flex justify-content-center">
-            
+            < Gallery/>
         </div>
     );
   }
