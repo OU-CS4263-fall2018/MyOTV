@@ -28,7 +28,7 @@ const styles = theme => ({
 });
 
 /**
- * The example data is structured as follows:
+ * The example data is tructured as follows:
  *
  * import image from 'path/to/image.jpg';
  * [etc...]
